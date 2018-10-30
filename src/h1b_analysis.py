@@ -6,7 +6,7 @@ parser.add_argument("output_occ", help="specify an output path for the top 10 oc
 parser.add_argument("output_sta", help="specify an output path for the top 10 states")
 args = parser.parse_args()
 
-with open(args.input, mode='r', encoding='utf-8') as h1b_csv:
+with open(args.input, mode='r') as h1b_csv:
     h1b = csv.DictReader(h1b_csv, delimiter = ';')
     n = 0
     top_occ = {}  # top 10 occupations
